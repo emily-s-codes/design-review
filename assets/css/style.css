@@ -1,0 +1,503 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: 'Graphik-Medium';
+    src: url("../fonts/Graphik-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Graphik-Regular';
+    src: url("../fonts/Graphik-Regular.woff");
+}
+
+@font-face {
+    font-family: 'Theinhardt-Lt';
+    src: url("../fonts/Theinhardt-Lt.woff");
+}
+
+@font-face {
+    font-family: 'TiemposHeadline-Semibold';
+    src: url("../fonts/TiemposHeadline-Semibold.woff");
+}
+
+h2 {
+    font-family: 'TiemposHeadline-Semibold';
+    font-size: 3rem;
+    color: #27282A;
+}
+
+p,
+ol li {
+    font-family: 'Theinhardt-Lt', sans-serif;
+    color: #27282A;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/* ============================
+    styles
+#2B2C2E /  
+#9FA2A7 / 
+#27282A /  
+#848689 / 
+#3D3E41 / 
+#fff
+    
+============================= */
+
+/* mobile-first */
+
+/* ============================
+    header
+============================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: flex-start;
+}
+
+/* nav burger menu */
+
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    font-family: 'Graphik-Regular', sans-serif;
+}
+
+.topnav ul {
+    list-style-type: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #2B2C2E;
+    text-align: center;
+    padding: 4px 5px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    width: 20px;
+}
+
+.topnav a.active {
+    background-color: #2B2C2E;
+    color: #fff;
+    width: 20px;
+}
+
+.topnav .icon {
+    display: none;
+    height: 30px;
+    width: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav ul a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: top;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 20px;
+    }
+
+    .topnavresponsive {
+        position: relative;
+    }
+
+    .topnavresponsive ul {
+        list-style-type: none;
+        padding-top: 20px;
+    }
+
+    .topnavresponsive a.icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        color: #2B2C2E;
+        text-align: center;
+        padding: 4px 5px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        float: left;
+        display: block;
+    }
+
+    .topnavresponsive ul a {
+        display: block;
+        text-align: left;
+        color: #2B2C2E;
+        background-color: #fff;
+        padding: 14px 5px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        width: 20px;
+    }
+}
+
+header h1 {
+    font-family: 'TiemposHeadline-Semibold', serif;
+    font-size: 3rem;
+}
+
+header button {
+    border: none;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+header button a {
+    text-decoration: none;
+    color: #2B2C2E;
+    background-color: #fff;
+    font-family: 'Graphik-Medium', sans-serif;
+    padding: 5px 30px;
+    border: 1px solid #2B2C2E;
+    border-radius: 5px;
+}
+
+/* ============================
+    main
+============================= */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#hero h1 {
+    font-family: 'Graphik-Regular', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px 50px 40px 50px;
+}
+
+#pricing__left {
+    font-family: 'Graphik-Medium', sans-serif;
+    width: 100%;
+    padding: 0 20px;
+    color: #27282A;
+}
+
+#pricing__right {
+    font-family: 'Theinhardt-Lt', sans-serif;
+    width: 100%;
+    padding: 20px 0;
+    text-align: right;
+    align-self: flex-end;
+}
+
+#price {
+    color: #27282A;
+    font-size: 5rem;
+}
+
+#price__ex {
+    color: #9FA2A7;
+    display: inline-block;
+    width: 80px;
+}
+
+#deliverables {
+    margin: 40px 50px;
+}
+
+#deliverables div img {
+    width: 80%;
+}
+
+#deliverables h2 {
+    margin: 40px 0 20px 0;
+}
+
+#deliverables h3 {
+    font-family: 'Graphik-Medium', sans-serif;
+    color: #27282A;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#hiw {
+    background-color: rgb(159, 162, 167, 0.2);
+    margin: 40px 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 40px;
+}
+
+#hiw__left article {
+    margin: 20px 0;
+}
+
+#hiw__left article h2 {
+    margin: 10px 0
+}
+
+#hiw__right img {
+    width: 100%;
+}
+
+#hiw__hiw ol li {
+    padding-left: 10px;
+}
+
+#critique {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 50px;
+}
+
+#critique__top {
+    text-align: center;
+}
+
+#critique__top p {
+    padding: 30px 10px;
+}
+
+#critique__bottom {
+    background-image: url("../img/28.png");
+    background-position: top center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    margin: 40px 0;
+}
+
+#critique__bottom p {
+    width: 50%;
+    z-index: 1;
+}
+
+#critique__bottom img {
+    width: 50%;
+}
+
+/* ============================
+    footer
+============================= */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid rgb(159, 162, 167, 0.2);
+    width: 80%;
+    margin: 40px auto;
+}
+
+footer h2 {
+    margin: 40px 0;
+}
+
+footer section p {
+    color: rgb(159, 162, 167);
+}
+
+footer section p img {
+    width: 80px;
+}
+
+footer section p a {
+    text-decoration: none;
+    font-family: 'Theinhardt-Lt', sans-serif;
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/* ============================
+    medium 601px+
+============================= */
+@media only screen and (min-width: 601px) {
+    header {
+        flex-direction: column;
+    }
+
+    .topnav ul {
+        display: flex;
+        width: 200px;
+    }
+
+    .topnav a {
+        color: #2B2C2E;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 1.2rem;
+    }
+
+    .topnav a:hover {
+        text-decoration: underline;
+    }
+
+    .topnav a.active {
+        background-color: #fff;
+        color: #2B2C2E;
+    }
+
+    button {
+        margin-top: 15px;
+        width: 200px;
+    }
+
+    button a:hover {
+        background-color: #2B2C2E;
+        color: #fff;
+    }
+
+    #pricing {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 80px 50px 40px 50px;
+    }
+
+    #pricing__left {
+        font-family: 'Graphik-Medium', sans-serif;
+        width: 60%;
+        color: #27282A;
+    }
+
+    /* #pricing__left p {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    } */
+
+    #pricing__right {
+        width: 20%;
+        margin-right: 100px;
+    }
+
+    #deliverables {
+        margin: 40px 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    #deliverables div {
+        width: 50%;
+    }
+
+    #deliverables div img {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    #deliverables__right {
+        padding: 10px;
+        width: 50%;
+    }
+
+    #hiw__hiw ol {
+        margin: 0 15px;
+    }
+
+    #critique__top p {
+        width: 50%;
+        margin: auto;
+    }
+
+    #critique__bottom {
+        padding: 120px 0 0 100px;
+    }
+
+
+}
+
+/* ============================
+    large 901px+
+============================= */
+@media only screen and (min-width: 901px) {
+    header {
+        margin: 10px 50px;
+        flex-direction: row;
+    }
+
+    .topnav ul {
+        width: 200px;
+    }
+
+    button {
+        width: 200px;
+    }
+
+    #deliverables {
+        margin: 80px 50px;
+    }
+
+    #deliverables h2 {
+        margin-bottom: 40px;
+    }
+
+    #deliverables h3 {
+        margin: 20px 0;
+    }
+
+    #hiw {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #critique__bottom {
+        padding-top: 100px;
+    }
+
+    #critique__bottom p {
+        margin-right: -10px;
+        padding-left: 150px;
+    }
+}
+
+/* ============================
+    xl 1201px+
+============================= */
+
+@media only screen and (min-width: 1201px) {
+    #deliverables {
+        margin: 100px 50px;
+    }
+
+    #deliverables h2 {
+        margin-bottom: 80px;
+    }
+
+    #deliverables h3 {
+        margin: 40px 0;
+    }
+
+    #critique__bottom {
+        padding-top: 100px;
+    }
+
+    #critique__bottom p {
+        margin-right: -20px;
+        padding-left: 220px;
+    }
+}
