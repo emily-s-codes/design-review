@@ -25,11 +25,6 @@
     src: url("../fonts/TiemposHeadline-Semibold.woff");
 }
 
-.night__mode {
-    background-color: #000;
-    color: white;
-}
-
 h2 {
     font-family: 'TiemposHeadline-Semibold';
     font-size: 3rem;
@@ -202,8 +197,7 @@ button a:hover {
 
 #night__mode a:hover {
     background-color: #9FA2A7;
-    color: pink;
-
+    color: aqua;
 }
 
 #hero {
@@ -556,4 +550,32 @@ footer section p a {
         margin-right: -20px;
         padding-left: 220px;
     }
+}
+
+/* ============================
+    Dark Mode
+============================= */
+.night__mode,
+.night__mode #myTopnav,
+.night__mode .topnav a,
+.night__mode .icon,
+.night__mode button,
+.night__mode #night__mode button,
+.night__mode p,
+.night__mode h2,
+.night__mode #deliverables h3,
+.night__mode ol li,
+.night__mode #hiw,
+.night__mode #price {
+    background-color: #000;
+    color: white;
+}
+
+.night__mode footer a {
+    color: aqua;
+}
+
+.night__mode .topnav a.active {
+    background-color: #000;
+    color: aqua;
 }
