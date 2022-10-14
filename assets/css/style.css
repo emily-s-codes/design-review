@@ -25,6 +25,11 @@
     src: url("../fonts/TiemposHeadline-Semibold.woff");
 }
 
+.night__mode {
+    background-color: #000;
+    color: white;
+}
+
 h2 {
     font-family: 'TiemposHeadline-Semibold';
     font-size: 3rem;
@@ -80,7 +85,7 @@ header {
     display: block;
     color: #2B2C2E;
     text-align: center;
-    padding: 4px 5px;
+    padding: 4px 0;
     text-decoration: none;
     font-size: 1.4rem;
     width: 20px;
@@ -165,9 +170,41 @@ header button a {
     border-radius: 5px;
 }
 
+button a:hover {
+    background-color: #2B2C2E;
+    color: #fff;
+}
+
 /* ============================
     main
 ============================= */
+
+#night__mode {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#night__mode button {
+    border: none;
+    background-color: #fff;
+    margin: 10px 10px 10px auto;
+}
+
+#night__mode a {
+    text-decoration: none;
+    color: #2B2C2E;
+    background-color: #fff;
+    font-family: 'Graphik-Medium', sans-serif;
+    padding: 5px 30px;
+    border: 1px solid #2B2C2E;
+    border-radius: 5px;
+}
+
+#night__mode a:hover {
+    background-color: #9FA2A7;
+    color: pink;
+
+}
 
 #hero {
     display: flex;
@@ -335,6 +372,15 @@ footer section p a {
     medium 601px+
 ============================= */
 @media only screen and (min-width: 601px) {
+
+    #night__mode {
+        justify-content: center;
+    }
+
+    #night__mode button {
+        margin: 10px auto;
+    }
+
     header {
         flex-direction: column;
         align-items: center;
@@ -343,7 +389,11 @@ footer section p a {
     .topnav ul {
         display: flex;
         justify-content: space-evenly;
-        width: 300px;
+        width: 400px;
+    }
+
+    .topnav ul li {
+        padding: 4px 0;
     }
 
     .topnav a {
@@ -367,10 +417,7 @@ footer section p a {
         width: 200px;
     }
 
-    button a:hover {
-        background-color: #2B2C2E;
-        color: #fff;
-    }
+
 
     #pricing {
         flex-direction: row;
@@ -437,11 +484,22 @@ footer section p a {
     }
 
     .topnav ul {
-        width: 200px;
+        width: 250px;
     }
 
     button {
-        width: 200px;
+        width: 250px;
+    }
+
+    #night__mode {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #night__mode button {
+        border: none;
+        background-color: #fff;
+        margin: 10px 75px 10px auto;
     }
 
     #deliverables {
@@ -477,6 +535,7 @@ footer section p a {
 ============================= */
 
 @media only screen and (min-width: 1201px) {
+
     #deliverables {
         margin: 100px 50px;
     }
