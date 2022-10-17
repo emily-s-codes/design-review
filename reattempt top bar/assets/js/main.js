@@ -20,9 +20,3 @@ function myFunction() {
         z.className = "width";
     }
 }
-
-function nightMode() {
-    event.preventDefault();
-    let x = document.getElementById("body");
-    x.classList.toggle("night__mode");
-}

@@ -56,18 +56,22 @@ ol li {
     header
 ============================= */
 header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
 /* nav burger menu */
+
+#grid1 {
+    grid-column: 1/2;
+    padding: 10px;
+}
 
 .topnav {
     background-color: #fff;
     overflow: hidden;
     font-family: 'Graphik-Regular', sans-serif;
+    /* background-color: blue; */
 }
 
 .topnav ul {
@@ -118,6 +122,9 @@ header {
     .topnavresponsive ul {
         list-style-type: none;
         padding-top: 20px;
+        background-color: white;
+        min-height: 100vh;
+        min-width: 100%;
     }
 
     .topnavresponsive a.icon {
@@ -129,7 +136,7 @@ header {
         padding: 4px 5px;
         text-decoration: none;
         font-size: 1.4rem;
-        float: left;
+        float: top;
         display: block;
     }
 
@@ -137,20 +144,38 @@ header {
         display: block;
         text-align: left;
         color: #2B2C2E;
-        background-color: #fff;
+        background-color: none;
         padding: 14px 5px;
         text-decoration: none;
         font-size: 1.4rem;
         width: 20px;
+    }
+
+    .h1responsive,
+    .widthresponsive {
+        display: none;
     }
 }
 
 header h1 {
     font-family: 'TiemposHeadline-Semibold', serif;
     font-size: 3rem;
+    grid-column: 2/3;
+
+    /* background-color: red; */
+    text-align: center;
+    padding: 10px;
+}
+
+header div.width {
+    grid-column: 3/4;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 header button {
+    margin-top: 5px;
     border: none;
     background-color: #fff;
 }
@@ -160,7 +185,7 @@ header button a {
     color: #2B2C2E;
     background-color: #fff;
     font-family: 'Graphik-Medium', sans-serif;
-    padding: 5px 30px;
+    padding: 5px 5px;
     border: 1px solid #2B2C2E;
     border-radius: 5px;
 }
@@ -168,6 +193,12 @@ header button a {
 button a:hover {
     background-color: #2B2C2E;
     color: #fff;
+}
+
+#hero h1 {
+    font-family: 'Graphik-Regular', sans-serif;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* ============================
@@ -366,6 +397,121 @@ footer section p a {
     medium 601px+
 ============================= */
 @media only screen and (min-width: 601px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        align-items: flex-start;
+    }
+
+    /* nav burger menu */
+
+    .topnav {
+        background-color: #fff;
+        overflow: hidden;
+        font-family: 'Graphik-Regular', sans-serif;
+    }
+
+    .topnav ul {
+        list-style-type: none;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #2B2C2E;
+        text-align: center;
+        padding: 4px 0;
+        text-decoration: none;
+        font-size: 1.4rem;
+        width: 20px;
+    }
+
+    .topnav a.active {
+        background-color: #2B2C2E;
+        color: #fff;
+        width: 20px;
+    }
+
+    .topnav .icon {
+        display: none;
+        height: 30px;
+        width: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav ul a {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: top;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: 20px;
+        }
+
+        .topnavresponsive {
+            position: relative;
+        }
+
+        .topnavresponsive ul {
+            list-style-type: none;
+            padding-top: 20px;
+        }
+
+        .topnavresponsive a.icon {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: #2B2C2E;
+            text-align: center;
+            padding: 4px 5px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            float: left;
+            display: block;
+        }
+
+        .topnavresponsive ul a {
+            display: block;
+            text-align: left;
+            color: #2B2C2E;
+            background-color: #fff;
+            padding: 14px 5px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            width: 20px;
+        }
+    }
+
+    header h1 {
+        font-family: 'TiemposHeadline-Semibold', serif;
+        font-size: 3rem;
+    }
+
+    header button {
+        border: none;
+        background-color: #fff;
+    }
+
+    header button a {
+        text-decoration: none;
+        color: #2B2C2E;
+        background-color: #fff;
+        font-family: 'Graphik-Medium', sans-serif;
+        padding: 5px 30px;
+        border: 1px solid #2B2C2E;
+        border-radius: 5px;
+    }
+
+    button a:hover {
+        background-color: #2B2C2E;
+        color: #fff;
+    }
 
     #night__mode {
         justify-content: center;
@@ -566,7 +712,11 @@ footer section p a {
 .night__mode #deliverables h3,
 .night__mode ol li,
 .night__mode #hiw,
-.night__mode #price {
+.night__mode #price,
+.night__mode header div.width,
+.night__mode .topnavresponsive ul,
+.night__mode .topnavresponsive ul li a,
+.night__mode .topnavresponsive .icon {
     background-color: #000;
     color: white;
 }

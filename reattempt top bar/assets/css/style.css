@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: 'Graphik-Medium';
+    src: url("../fonts/Graphik-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Graphik-Regular';
+    src: url("../fonts/Graphik-Regular.woff");
+}
+
+@font-face {
+    font-family: 'Theinhardt-Lt';
+    src: url("../fonts/Theinhardt-Lt.woff");
+}
+
+@font-face {
+    font-family: 'TiemposHeadline-Semibold';
+    src: url("../fonts/TiemposHeadline-Semibold.woff");
+}
+
+h2 {
+    font-family: 'TiemposHeadline-Semibold';
+    font-size: 3rem;
+    color: #27282A;
+}
+
+p,
+ol li {
+    font-family: 'Theinhardt-Lt', sans-serif;
+    color: #27282A;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/* ===========================HEADER STYLES=============================== */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+/* nav burger menu */
+
+#grid1 {
+    grid-column: 1/2;
+    padding: 10px;
+}
+
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    font-family: 'Graphik-Regular', sans-serif;
+    /* background-color: blue; */
+}
+
+.topnav ul {
+    list-style-type: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #2B2C2E;
+    text-align: center;
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 1.4rem;
+    width: 20px;
+}
+
+.topnav a.active {
+    background-color: #2B2C2E;
+    color: #fff;
+    width: 20px;
+}
+
+.topnav .icon {
+    display: none;
+    height: 30px;
+    width: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav ul a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: top;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 20px;
+    }
+
+    .topnavresponsive {
+        position: relative;
+    }
+
+    .topnavresponsive ul {
+        list-style-type: none;
+        padding-top: 20px;
+        background-color: white;
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    .topnavresponsive a.icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        color: #2B2C2E;
+        text-align: center;
+        padding: 4px 5px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        float: top;
+        display: block;
+    }
+
+    .topnavresponsive ul a {
+        display: block;
+        text-align: left;
+        color: #2B2C2E;
+        background-color: none;
+        padding: 14px 5px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        width: 20px;
+    }
+
+    .h1responsive,
+    .widthresponsive {
+        display: none;
+    }
+}
+
+header h1 {
+    font-family: 'TiemposHeadline-Semibold', serif;
+    font-size: 3rem;
+    grid-column: 2/3;
+
+    /* background-color: red; */
+    text-align: center;
+    padding: 10px;
+}
+
+header div.width {
+    grid-column: 3/4;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+header button {
+    margin-top: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+header button a {
+    text-decoration: none;
+    color: #2B2C2E;
+    background-color: #fff;
+    font-family: 'Graphik-Medium', sans-serif;
+    padding: 5px 5px;
+    border: 1px solid #2B2C2E;
+    border-radius: 5px;
+}
+
+button a:hover {
+    background-color: #2B2C2E;
+    color: #fff;
+}
+
+#hero h1 {
+    font-family: 'Graphik-Regular', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
